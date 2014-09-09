@@ -1,5 +1,4 @@
 body{
-
 color:#848484;
 font:400 15px/22px 'Open Sans',sans-serif;
 margin-top: 10px;
@@ -105,9 +104,6 @@ float:left;
 width:1024px;
 }
 
-#Emergency{
-}
-
 #footer{
 min-height: 75px;
 background:url(img/white.png) repeat left top;
@@ -147,11 +143,11 @@ display:block;
 float:left;
 line-height:30px;
 overflow:hidden;
-padding:0 10px 0 0;
+padding:0 10px 0 10px;
 position:relative;
 text-align:center;
 text-decoration:none;
-width:125px;
+min-width:125px;
 }
 
 #Nav a:hover{
