@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Page Title</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
+		<script type="text/javascript">
+			//Change BG Image on page load.
+				function changeImg(imgNumber)	{
+				var myImages = ["img/body.jpg"];
+				var imgShown = document.body.style.backgroundImage;
+				var newImgNumber =Math.floor(Math.random()*myImages.length);
+				document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
+				}
+				window.onload=changeImg;
+					//Google Fonts Script Below
+			  WebFontConfig = {
+			    google: { families: [ 'Open+Sans:400,300,400italic,700:latin' ] }
+			  };
+			  (function() {
+			    var wf = document.createElement('script');
+			    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			    wf.type = 'text/javascript';
+			    wf.async = 'true';
+			    var s = document.getElementsByTagName('script')[0];
+			    s.parentNode.insertBefore(wf, s);
+			  })();
+		</script>
+	</head>
+	<body class="bg">
+		<div id="Wrapper">
+			<div id="Content">
+					<div id="Header">
+						<a class="logo" href="#" title="Logo Alt Text Here"></a>
+
+					</div>
+												<div id="Nav">
+							<a href="#">Link 1</a>
+							<a href="#">Link 2</a>
+							<a href="#" rel="newwindow">Link 3</a>
+							<a href="javascript:void(0)">Hover Nav
+								<span id="Resources">
+									<span onclick="window.open('#')">Link 1</span>
+									<span onclick="window.open('#')">Link 2</span>
+									<span onclick="window.open('#')">Link 3</span>
+								</span>
+							</a>
+							<a class="navbottom" href="#" rel="newwindow">Link 4</a>
+						</div>
+				<div id="Column2">
+					<div id="Column2Inner">
+						<p>Page Content - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
+						</p>
+						<p class="bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+					</div>
+				</div>
+				<div id="Column1">
+					<div id="Column1Inner">
+						<h2 class="top">Header 2 - Callout Content</h2>
+						<p>Call Out Content - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+					</div>
+				</div>
+			</div>
+			<div id="footer"><p>Dummy Footer Content Here | <a href="#">Link</a></p></div>
+		</div>
+	</body>
+</html>
