@@ -91,7 +91,7 @@ width:694px;
 background:url(img/white.png) repeat left top;
 padding:20px;
 margin-bottom:8px;
-min-height: 857px;
+min-height: 600px;
 }
 
 #Column3{
@@ -123,11 +123,22 @@ padding-top: 20px;
 padding-top: 40px;
 padding-left: 20px;
 background:url(img/white.png) repeat left top;
-height:67px;
+height:300px;
 margin-bottom:8px;
 position:relative;
 }
-
+.address{
+color:#0D223F;
+margin-top: 225px;
+text-align: center;
+}
+.phone{
+color:#0D223F;
+text-align: center;
+}
+.email{
+text-align: center;
+}
 #Nav{
 color:#d2d2d2;
 font:normal normal 400 18px/25px sans-serif;
@@ -153,7 +164,6 @@ min-width:125px;
 
 #Nav a:hover{
 background-color:rgba(255, 255, 255, 0.3);
-/*border-right:4px solid #9ea62d;*/
 color:#0D223F;
 overflow:visible;
 }
@@ -199,21 +209,14 @@ position:relative;
 width:1024px;
 }
 
-#logo{
-background:url(img/white.png) repeat left top;
-height:107px;
-margin-bottom:8px;
-position:relative;
-width:300px;
-}
-
 a.logo{
 background:url(img/logo1.png) no-repeat left top;
-height:83px;
-left:24px;
+height:231px;
+left:395px;
 position:absolute;
 top:15px;
 width:250px;
+margin: 0 auto;
 }
 
 .bottom{
