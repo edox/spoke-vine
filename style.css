@@ -91,7 +91,7 @@ width:694px;
 background:url(img/white.png) repeat left top;
 padding:20px;
 margin-bottom:8px;
-min-height: 600px;
+min-height: 550px;
 }
 
 #Column3{
@@ -140,7 +140,7 @@ text-align: center;
 text-align: center;
 }
 #fader{
-margin-top: 35px;
+margin-top: 5px;
 }
 #Nav{
 color:#d2d2d2;
