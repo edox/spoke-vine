@@ -151,6 +151,9 @@ text-align: center;
 text-align: center;
 }
 #fader{
+position: relative; 
+width: 100%;
+height: 200px;
 margin-top: 5px;
 }
 #Nav{
