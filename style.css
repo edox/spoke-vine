@@ -37,7 +37,13 @@ font:400 18px/21px 'Open Sans',sans-serif;
 margin:10px 0;
 padding:0;
 }
-
+table h2{
+margin:5px 0;
+font:400 18px/23px 'Helvetica',sans-serif;
+}
+table h3{
+font:400 16px/23px 'Helvetica',sans-serif;
+}
 img{
 border:0;
 display:block;
