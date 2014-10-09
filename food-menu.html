@@ -5,7 +5,7 @@
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta http-equiv="cache-control" content="no-cache" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
-		
+		<script src="jquery-1.11.1.min.js"></script>
 		<script type="text/javascript">
 			//Change BG Image on page load.
 				function changeImg(imgNumber)	{
@@ -28,7 +28,61 @@
 			    var s = document.getElementsByTagName('script')[0];
 			    s.parentNode.insertBefore(wf, s);
 			  })();
+			  //fader
+				$(function() {
+				$('#fader img:not(:first)').hide();
+				$('#fader img').css('position', 'absolute');
+				$('#fader img').css('top', '0px');
+				$('#fader img').css('left', '50%');
+				$('#fader img').each(function() {
+					var img = $(this);
+					$('<img>').attr('src', $(this).attr('src')).load(function() {
+						img.css('margin-left', -this.width / 2 + 'px');
+					});
+				});
+
+				var pause = false;
+				
+				function fadeNext() {
+					$('#fader img').first().fadeOut().appendTo($('#fader'));
+					$('#fader img').first().fadeIn();
+				}
+
+				function fadePrev() {
+					$('#fader img').first().fadeOut();
+					$('#fader img').last().prependTo($('#fader')).fadeIn();
+				}
+
+				$('#fader, #next').click(function() {
+					fadeNext();
+				});
+
+				$('#prev').click(function() {
+					fadePrev();
+				});
+
+				$('#fader, .button').hover(function() {
+					pause = true;
+				},function() {
+					pause = false;
+				});
+
+				function doRotate() {
+					if(!pause) {
+						fadeNext();
+					}    
+				}
+				
+				var rotate = setInterval(doRotate, 4000);
+			});
 		</script>
+				<style>
+		#fader {
+		position: relative; 
+		width: 100%;
+		height: 200px;
+			}
+		</style>
 	</head>
 	<body class="bg">
 		<div id="Wrapper">
@@ -54,7 +108,12 @@
 						</div>
 				<div id="Column2-interior">
 					<div id="Column2Inner">
-						<h1>Small bites</h1>
+					<div id="fader">
+							<img style="padding: 0px 5px 5px 0px; margin: 0 auto;" src="img/food.png"/>
+							<img style="padding: 0px 5px 5px 0px; margin: 0 auto;" src="img/food2.png"/>
+						</div>
+					
+						<h1 style="margin:10px 0px 10px 25px; font:400 20px/23px 'Helvetica',sans-serif;">Small bites</h1>
 						<table width=85% align=center>
 						<tr>
 						<td><h2>Olive Oil Poached Marcona Almonds</h2></td><td><h2>3</h2></td>
@@ -87,99 +146,99 @@
 						<td><h3><em>sample oils from three distinct regions of Europe. Served with fresh baguette</em></h3></td>
 						</tr>
 						</table>
-
+						<hr />
+						<h1 style="margin:10px 0px 10px 25px; font:400 20px/23px 'Helvetica',sans-serif;">A little more...</h1>
+						<table width=85% align=center>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td width="60%"><h2>Cheese</h2></td><td align="right"><h2>Choose one for 7| two for 12| or 4 for 20</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>Ask server for current selections</em></h3></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>Charcuterie</h2></td><td align="right"><h2>Choose one for 7| two for 12| or 4 for 20</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>Ask server for current selections</em></h3></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>Pate</h2></td><td align="right"><h2>8</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>firm country pistachio,or chicken liver mousse with wine, truffles and wild mushrooms. Served with cornichons, mustard and baguette</em></h3></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>Pork Rillette</h2></td><td align="right"><h2>8</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>succulent pork shoulder, slow cooked. Served with Pickled vegetables, mustard and baguette</em></h3></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>Warm Brie</h2></td><td align="right"><h2>12</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>enough for two, garlic, honey, apples, baguette</em></h3></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>From the Larder</h2></td><td align="right"><h2>15</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>spreads and things to share. deviled ham, horseradish cheddar, collard green and pecan pesto, baguette</em></h3></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>Quiche</h2></td><td align="right"><h2>8</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
-						</tr>
-
-						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h3><em>Changes daily- ask server for current selection</em></h3></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>served with house salad and champagne vinaigrette</em></h3></td>
+						</tr>
+						</table>
+						<hr />
+						<h1 style="margin:10px 0px 10px 25px; font:400 20px/23px 'Helvetica',sans-serif;">Sweets</h1>
+						<table width=85% align=center>						
+						<tr>
+						<td><h2>Dark Chocolatte Mousse</h2></td><td align="right"><h2>7</h2></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>Vanilla Sponge Cake</h2></td><td align="right"><h2>7</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>seasonal fruit and creme chantilly</em></h3></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>Blue Cheese</h2></td><td align="right"><h2>8</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>Fourme d'ambert drizzled with honey and served with crostini</em></h3></td>
+						</tr>
+						</table>
+						<hr />
+						<h1 style="margin:10px 0px 10px 25px; font:400 20px/23px 'Helvetica',sans-serif;">Dessert Wine</h1>
+						<table width=85% align=center>							
+						<tr>
+						<td><h2>2012 Villa Rosa Moscato</h2></td><td align="right"><h2>11/26</h2></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>Chateau Grillon Sauternes</h2></td><td align="right"><h2>18/36</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>Bordeaux, France</em></h3></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>Gallino Birbet Brochetto NV</h2></td><td align="right"><h2>14/28</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
+						<td><h3><em>Frizzante, pair with chocolate</em></h3></td>
 						</tr>
 						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
+						<td><h2>Riebeek Port</h2></td><td align="right"><h2>13/28</h2></td>
 						</tr>
 						<tr>
-						<td><h3><em></em></h3></td>
-						</tr>
-						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
-						</tr>
-						<tr>
-						<td><h3><em></em></h3></td>
-						</tr>
-						<tr>
-						<td><h2></h2></td><td><h2></h2></td>
-						</tr>
-						<tr>
-						<td><h3><em></em></h3></td>
-						</tr>						
-						
+						<td><h3><em>Pair with blue cheese</em></h3></td>
+						</tr>					
+						</table>
 						
 						<p class="bottom"> </p>
 					</div>
