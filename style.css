@@ -105,6 +105,10 @@ margin-bottom:8px;
 min-height: 550px;
 }
 
+#Column2-interior{
+padding: 5px;
+}
+
 #Column3{
 padding:20px;
 }
